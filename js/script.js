@@ -152,38 +152,41 @@ const mbtiResults = {
 };
 
 const form = document.getElementById('mbti-form');
+const startPage = document.getElementById("start-page");
+const questionPage = document.getElementById("question-page");
+const resultPage = document.getElementById("result-page");
 let currentQuestionIndex = 0;
 
 function startTest() {
-  document.getElementById('start-page').style.display = "none";
-  document.getElementById('question-page').style.display = "block";
+  startPage.style.display = "none";
+  questionPage.style.display = "block";
   renderQuestion(currentQuestionIndex);
 }
 
 function renderQuestion(index) {
   form.innerHTML = "";
-  let q = questions[index];
+  const q = questions[index];
 
-  let questionDiv = document.createElement('div');
+  const questionDiv = document.createElement('div');
   questionDiv.classList.add('question');
   
-  let questionTitle = document.createElement('p');
+  const questionTitle = document.createElement('p');
   questionTitle.textContent = q.question;
   questionDiv.appendChild(questionTitle);
 
-  let choicesDiv = document.createElement('div');
+  const choicesDiv = document.createElement('div');
   choicesDiv.classList.add('choices');
   
   q.choices.forEach((choice, choiceIndex) => {
-    let label = document.createElement('label');
+    const label = document.createElement('label');
 
-    let input = document.createElement('input');
+    const input = document.createElement('input');
     input.type = 'radio';
     input.id = `q${index + 1}-choice${choiceIndex + 1}`;
     input.name = `q${index + 1}`;
     input.value = choice.type;
 
-    let span = document.createElement('span');
+    const span = document.createElement('span');
     span.textContent = choice.text;
 
     label.appendChild(input);
@@ -195,12 +198,13 @@ function renderQuestion(index) {
   questionDiv.appendChild(choicesDiv);
   form.appendChild(questionDiv);
 
-  // "다음" 버튼 추가
+  // "다음" 버튼
   if (index < questions.length - 1) {
-    let nextBtn = document.createElement('button');
+    const nextBtn = document.createElement('button');
     nextBtn.textContent = "다음";
     nextBtn.addEventListener('click', function(event) {
-      event.preventDefault();
+      //기본동작을 막아줌(답변 선택을 안해서 뜬 alert의 확인을 눌렀을 때 새로고침 되는 현상 막기)
+      event.preventDefault(); 
       if (form[`q${index + 1}`].value) {
         renderQuestion(index + 1);
       } else {
@@ -209,7 +213,7 @@ function renderQuestion(index) {
     });
     form.appendChild(nextBtn);
   } else {
-    let submitBtn = document.createElement('button');
+    const submitBtn = document.createElement('button');
     submitBtn.textContent = "제출";
     submitBtn.addEventListener('click', function(event) {
       event.preventDefault();
@@ -220,21 +224,21 @@ function renderQuestion(index) {
 }
 
 function showResultPage(type) {
-  document.getElementById('question-page').style.display = "none";
-  document.getElementById('result-page').style.display = "block";
+  questionPage.style.display = "none";
+  resultPage.style.display = "block";
 
-  let resultText = document.getElementById('result');
-  let mbtiResult = mbtiResults[type];
+  const resultText = document.getElementById('result');
+  const mbtiResult = mbtiResults[type];
 
   if (mbtiResult) {
     // 이미지
-    let resultImg = document.createElement('img');
+    const resultImg = document.createElement('img');
     resultImg.src = mbtiResult.imageUrl;
     resultImg.alt = type + " 이미지";
     resultText.after(resultImg);
 
     // 설명문
-    let descriptionDiv = document.createElement('div');
+    const descriptionDiv = document.createElement('div');
     descriptionDiv.textContent = mbtiResult.description;
     resultImg.after(descriptionDiv);
 
@@ -245,9 +249,8 @@ function showResultPage(type) {
 }
 
 function calculateResult() {
-  let typeCounts = {
-    E: 0, I: 0, N: 0, S: 0, T: 0, F: 0, J: 0, P: 0
-  };
+  let typeCounts = {E: 0, I: 0, N: 0, S: 0, T: 0, F: 0, J: 0, P: 0};
+
   questions.forEach((_, index) => {
       let radioInput = form[`q${index + 1}`];
       
@@ -263,12 +266,12 @@ function calculateResult() {
   resultType += typeCounts.T > typeCounts.F ? "T" : "F";
   resultType += typeCounts.J > typeCounts.P ? "J" : "P";
 
-  showResultPage(resultType);  // 여기를 수정
+  showResultPage(resultType);
 }
 
 function restartTest() {
-  document.getElementById('result-page').style.display = "none";
-  document.getElementById('start-page').style.display = "block";
+  resultPage.style.display = "none";
+  startPage.style.display = "block";
   currentQuestionIndex = 0;
 }
 
