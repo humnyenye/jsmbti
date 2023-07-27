@@ -86,67 +86,67 @@ const questions = [
 ];
 const mbtiResults = {
   'ISTJ': {
-    imageUrl: "../img/ISTJ.jpg",
+    imageUrl: "./img/ISTJ.jpg",
     description: "당신은 현실주의자 입니다. 체계적이고 정확하며 책임감이 뛰어난 타입으로, 집중력과 끊기가 높은 타입입니다. 같은 작업을 반복해서 하는 게임이나 사고력을 높이는 퍼즐 게임을 추천드립니다."
   },
   'ISTP': {
-    imageUrl: "../img/ISTP.jpg",
+    imageUrl: "./img/ISTP.jpg",
     description: "당신은 도전적인 장인 입니다. 이 타입의 사람은 객관적이고 효율을 중시하면서도 역설적으로 호기심이 많고 창의력이 뛰어납니다. 개념만 이해한다면 무엇이든 할 수 있는 자유도가 높은 타이쿤 게임을 추천드립니다."
   },
   'INFJ': {
-    imageUrl: "../img/INFJ.jpg",
+    imageUrl: "./img/INFJ.jpg",
     description: "당신은 선의의 이상주의자 입니다. 게임 캐릭터와 플레이어간에 긴밀한 유대감을 가질 수 있는, 스토리에 몰입이 가능한 RPG 게임을 추천드립니다."
   },
   'INTJ': {
-    imageUrl: "../img/INTJ.jpg",
+    imageUrl: "./img/INTJ.jpg",
     description: "당신은 치밀한 전략가 입니다. 매 순간이 선택의 연속인 게임을 추천드립니다."
   },
   'ISFJ': {
-    imageUrl: "../img/ISFJ.jpg",
+    imageUrl: "./img/ISFJ.jpg",
     description: "당신은 주변 사람을 보호하고 헌신하는 수호자 입니다. 정의로운 스토리를 선호하며 다른 사람(NPC)들과의 다양한 상호작용을 즐길 수 있는 게임을 추천드립니다."
   },
   'ISFP': {
-    imageUrl: "../img/ISFP.jpg",
+    imageUrl: "./img/ISFP.jpg",
     description: "당신은 감각적인 예술가 입니다. 항상 새로운 경험을 추구하고 유연한 사고를 하는 예술가 타입에게는 한계점이 정해지지 않은 자유로운 샌드박스 게임을 추천드립니다."
   },
   'INFP': {
-    imageUrl: "../img/INFP.jpg",
+    imageUrl: "./img/INFP.jpg",
     description: "당신은 낭만적인 이타주의자 입니다. 다른 사람과 경쟁하는 게임보다는 자신의 페이스대로 진행 할 수 있는 스토리 게임, 그 중에서도 감성적인 게임을 추천드립니다."
   },
   'INTP': {
-    imageUrl: "../img/INTP.jpg",
+    imageUrl: "./img/INTP.jpg",
     description: "당신은 논리적인 혁신가 입니다. 넓은 세상을 다양한 방식으로 탐험할 수 있는 게임을 추천드립니다"
   },
   'ESTJ': {
-    imageUrl: "../img/ESTJ.jpg",
+    imageUrl: "./img/ESTJ.jpg",
     description: "당신은 철저한 경영자 입니다. 이 타입의 사람은 자기관리가 철저하고 의미 없는 시간을 보내는 것을 싫어하기 때문에 현실적으로 자기 관리를 할 수 있는 게임을 추천드립니다."
   },
   'ESFP': {
-    imageUrl: "../img/ESFP.jpg",
+    imageUrl: "./img/ESFP.jpg",
     description: "당신은 즉흥적이고 에너지 넘치는 연예인 입니다. 이 타입의 사람들은 관심 받는 것을 좋아하고 매 순간의 즐거움을 찾아 주위에 밝은 분위기를 연출해 냅니다. 다른 사람들과 함께 즐길 수 있으며 경쟁보다는 다함께 즐길 수 있는 게임을 추천드립니다."
   },
   'ENFP': {
-    imageUrl: "../img/ENFP.jpg",
+    imageUrl: "./img/ENFP.jpg",
     description: "당신은 열정적인 활동가입니다. 이 타입의 사람은 다른 사람들과 어울리기 좋아하고 반복되는 활동은 쉽게 질려할 수 있습니다. 늘 다른 사람과 함께하며, 매 경기가 달라지는 게임을 추천드립니다."
   },
   'ENTP': {
-    imageUrl: "../img/ENTP.jpg",
+    imageUrl: "./img/ENTP.jpg",
     description: "당신은 도전을 즐기는 호기심 많은 사색가입니다. 틀에 박힌 플레이 방식을 거부하고 창의적인 '트롤'을 할 수 있는 게임을 추천 드립니다."
   },
   'ESFJ': {
-    imageUrl: "../img/ESFJ.jpg",
+    imageUrl: "./img/ESFJ.jpg",
     description: "당신은 활발한 사교가 입니다. 인싸 중의 인싸인 이런 타입에게는 유행하는 주류 게임이며 다른 사람과 함께 플레이 할 수 있는 파티 게임을 추천드립니다."
   },
   'ESTP': {
-    imageUrl: "../img/ESTP.jpg",
+    imageUrl: "./img/ESTP.jpg",
     description: "당신은 위험을 감수하는 사업가 입니다. 직접 경험하고 행동하는 것, 스릴 있고 자극적인 것을 좋아하는 당신에게는 시시각각 위협이 닥쳐오고 액션이 호쾌한 게임을 추천드립니다."
   },
   'ENFJ': {
-    imageUrl: "../img/ENFJ.jpg",
+    imageUrl: "./img/ENFJ.jpg",
     description: "당신은 팀원에게 의욕을 불어넣는 지도자입니다. 사람들을 좋아하고 리더쉽 넘치는 당신은 자신이 주인공이 될 수 있는 팀 게임을 추천드립니다."
   },
   'ENTJ': {
-    imageUrl: "../img/ENTJ.jpg",
+    imageUrl: "./img/ENTJ.jpg",
     description: "당신은 뛰어난 사령관입니다. 목표를 달성하기 위해 팀원을 지휘할 수 있는 게임을 추천드립니다."
   },
 };
