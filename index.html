@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--폰트-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <!--css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <section id="start-page">
+    <div class="page-wrapper">
+      <h1>나에게 맞는 게임 추천</h1>
+      <div class="img">
+        <img src="./img/mainIcon.png" alt="mainIcon">
+      </div>
+      <button onclick="startTest()">&gt; 테스트 시작</button>
+    </div>
+  </section>
+  <!--설문 페이지-->
+  <section id="question-page">
+      <form id="mbti-form"></form>
+  </section>
+
+  <!-- 결과 페이지 -->
+  <section id="result-page">
+    <div class="page-wrapper">
+      <h1>당신의 게임 추천 결과는</h1>
+      <p id="result"></p>
+      <button onclick="restartTest()">다시 시작</button>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
+</body>
+</html>
