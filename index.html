@@ -13,28 +13,34 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <section id="start-page">
-    <div class="page-wrapper">
-      <h1>나에게 맞는 게임 추천</h1>
-      <div class="img">
-        <img src="./img/mainIcon.png" alt="mainIcon">
+  <div class="page-container">
+    <section id="start-page">
+      <div class="page-wrapper">
+        <h1>나에게 맞는 게임 추천</h1>
+        <div class="img">
+          <img src="./img/mainIcon.png" alt="mainIcon">
+        </div>
+        <button onclick="startTest()">&gt; 테스트 시작</button>
       </div>
-      <button onclick="startTest()">&gt; 테스트 시작</button>
-    </div>
-  </section>
-  <!--설문 페이지-->
-  <section id="question-page">
+    </section>
+    <!--설문 페이지-->
+    <section id="question-page">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
       <form id="mbti-form"></form>
-  </section>
-
-  <!-- 결과 페이지 -->
-  <section id="result-page">
-    <div class="page-wrapper">
-      <h1>당신의 게임 추천 결과는</h1>
-      <p id="result"></p>
-      <button onclick="restartTest()">다시 시작</button>
-    </div>
-  </section>
+    </section>
+  
+    <!-- 결과 페이지 -->
+    <section id="result-page">
+      <div class="page-wrapper">
+        <h1>당신의 게임 추천 결과는</h1>
+        <p id="result"></p>
+        <button onclick="restartTest()">다시 시작</button>
+      </div>
+    </section>
+  </div>
+  <script src="./js/data.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
