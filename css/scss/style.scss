@@ -149,6 +149,9 @@ button{
   }
   button{
     margin-top: auto;
+    &+button{
+      margin-top: 15px;
+    }
   }
 }
 

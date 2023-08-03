@@ -122,10 +122,38 @@ function calculateResult() {
 }
 
 function restartTest() {
-  resultPage.style.display = "none";
-  startPage.style.display = "block";
-  currentQuestionIndex = 0;
+  location.reload();
 }
 
 // 초기에 첫 번째 질문 렌더링
 renderQuestion(currentQuestionIndex);
+
+//결과 공유하기
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      console.log('텍스트가 클립보드에 복사되었습니다.');
+    })
+    .catch((error) => {
+      console.error('클립보드 복사 실패:', error);
+    });
+}
+
+function shareResult() {
+  const shareUrl = window.location.href; 
+  const pageContainer = document.querySelector('.page-container');
+
+  copyToClipboard(shareUrl);
+  alert('URL이 복사되었습니다. 결과를 공유해주세요!');
+
+  // 페이지를 이미지로 저장
+  html2canvas(pageContainer).then(function(canvas) {
+    const imageUrl = canvas.toDataURL();
+
+    // 이미지를 다운로드할 링크 생성
+    const downloadLink = document.createElement('a');
+    downloadLink.href = imageUrl;
+    downloadLink.download = 'result.png'; // 다운로드될 파일명
+    downloadLink.click();
+  });
+}

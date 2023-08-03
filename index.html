@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,7 @@
         <button onclick="startTest()">&gt; 테스트 시작</button>
       </div>
     </section>
+
     <!--설문 페이지-->
     <section id="question-page">
       <div class="progress-container">
@@ -36,10 +37,12 @@
       <div class="page-wrapper">
         <h1>당신의 게임 추천 결과는</h1>
         <p id="result"></p>
-        <button onclick="restartTest()">다시 시작</button>
+        <button class="button__restart" onclick="restartTest()">다시 시작</button>
+        <button class="button__share" onclick="shareResult()">결과 공유</button>
       </div>
     </section>
   </div>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/script.js"></script>
 </body>
