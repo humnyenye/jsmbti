@@ -1,5 +1,4 @@
 # html, css, js로 MBTI 심리테스트 페이지 만들기
-> 취업9조대 스프린트 프로젝트
 
 <div>
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -7,7 +6,7 @@
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
 </div>
 
-취업9조대 스터디 내 스프린트 프로젝트. html, css, js를 이용하여 간단한 심리테스트 페이지 만들기
+html, css, js를 이용하여 간단한 심리테스트 페이지 만들기
 
 ## 사용 예제
 
